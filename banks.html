@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Respect</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" type="text/css" href="normalize.css" />
+<link rel="stylesheet" type="text/css" href="respect.css" />
+<link rel="stylesheet" type="text/css" href="menu.css" />
+</head>
+
+<body>
+<img id="logo" src="respect.png" />
+
+<nav role='navigation'>
+  <div id="menuToggle">
+    <input type="checkbox" />
+    
+    <span></span>
+    <span></span>
+    <span></span>
+	<span></span>
+    
+    <ul id="menu">
+      <li><a href="index.html">How it Works</a></li>
+	  <li><a href="schools.html">For Schools</a></li>
+	  <li><a href="banks.html">For Banks</a></li>
+      <li><a href="start.html#pricing">Pricing</a></li>
+      <li><a href="start.html#submit">Get Started</a></li>
+	  <li><a href="about.html">About &amp; Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div id="content" class="expansive">
+
+<h>Verifying Addresses to Find Financial Fraud</h>
+<p>In various scenarios, financial institutions are required to collect residential or business addresses, rather than merely mailing addresses. This helps combat money laundering, wire fraud, and other criminal activity. Unfortunately, their current mechanisms for validating addresses are vulnerable to the same misrepresentations that we found in voter rolls. This document describes the laws that regulate financial institutions, i.e. the scenarios in which we could be of service.</p>
+
+
+<h>Accounts must have valid residential or business addresses</h>
+<p>As part of <a href="https://www.federalregister.gov/documents/2003/05/09/03-11019/customer-identification-programs-for-banks-savings-associations-credit-unions-and-certain">Section 326</a> of the PATRIOT ACT, banks are required to implement Customer Identification Programs. (These are commonly known as Know Your Customer rules.) The pertinent law <a href="https://www.sec.gov/about/offices/ocie/aml2007/31cfr103.121.pdf">31 CFR 103.121</a> broadly applies to all accounts created after October 1st 2003:
+<blockquote>Account means a formal banking relationship established to provide or engage in services, dealings, or other financial transactions including a deposit account, a transaction or asset account, a credit account, or other extension of credit. Account also includes a relationship established to provide a safety deposit box or other safekeeping services, or cash management, custodian, and trust services.</blockquote>
+<p>Before opening an account, the bank must obtain a proper address for the customer, which is defined as:
+<blockquote>
+(i) For an individual, a residential or business street address; <br>
+(ii) For an individual who does not have a residential or business street address, an Army Post Office (APO) or Fleet Post Office (FPO) box number, or the residential or business street address of next of kin or of another contact individual; or <br>
+(iii) For a person other than an individual (such as a corporation, partnership, or trust), a principal place of business, local office, or other physical location
+</blockquote>
+<p>Subsequently, FinCEN made <a href="https://www.fincen.gov/resources/statutes-regulations/administrative-rulings/customer-identification-program-rule-address">another exception</a> for customers enrolled in address confidentiality programs (ACP) for their safety:
+<blockquote>...a [financial institution] should collect the street address of the ACP sponsoring agency for purposes of meeting its CIP address requirement.</blockquote>
+<p>A large <a href="https://www.businesswire.com/news/home/20201104005225/en/15.8-Billion-Identity-Verification-Non-Biometric-and-Biometric-Market---Global-Forecast-to-2025---ResearchAndMarkets.com">identity verification industry</a> provides these services to banks. However, their services are completely automated, and are oriented primarily towards ensuring the customer is a real person, rather than specifically verifying that their given address is valid. (TODO: try signing up for a Square account with a P.O. Box!)</p>
+
+<h>Wire transfers (often) must have valid residential or business addresses</h>
+<p>For transfers of over $3000, banks are subject to the Recordkeeping Rule (<a href="https://www.federalregister.gov/select-citation/2020/10/27/31-CFR-1020.410">31 CFR 1020.410(a)</a>) and the Travel Rule (<a href="https://www.federalregister.gov/select-citation/2020/10/27/31-CFR-1010.410">31 CFR 1010.410(f)</a>). (Per a <a href="https://www.federalregister.gov/documents/2020/10/27/2020-23756/threshold-for-the-requirement-to-collect-retain-and-transmit-information-on-funds-transfers-and">recent FinCEN proposal</a>, the rules may also cover virtual currencies, and the threshold may drop to $250). These require collecting the address of the transmittor and/or beneficiary. In general, the Travel Rule <a href="https://www.govinfo.gov/content/pkg/FR-2003-11-28/html/03-29617.htm">admits mailing addresses</a>:
+<blockquote>"After weighing the competing interests involved in whether to require street address information FinCEN has determined that the Travel Rule should be read to allow the use of mailing addresses.</blockquote>
+<p>However, in practice, the protocols employed by banks are more stringent. Furthermore, <a href="https://www.swift.com/swift-resource/165516/download">regulation in other countries</a> may be more stringent.</p>
+<blockquote>Australian AML/CTF legislation is strict in its requirement that a payer's full business or residential address not be a P.O. Box. Accordingly, any inbound message to Australia containing a P.O. Box might be queried, delayed or rejected. Similar requirements may exist in other countries.</blockquote></p>
+
+<h>Beneficial owners of reporting companies must have valid residential or business addresses</h>
+<p>Very recently, the Corporate Transparency Act was passed as <a href="https://www.compliancebuilding.com/wp-content/uploads/2021/01/Corporate-Transparency-Act.pdf">Sections 6401-6403 of the 2021 NDAA</a>. It strengthens <a href="https://www.llcuniversity.com/wp-content/uploads/Customer-Due-Diligence-Final-Rule-FinCEN.pdf">previous laws</a> requiring disclosure of ownership. A *reporting company* is a corporation, limited liability company, or other similar entity created by filing with the state. A *beneficial owner* owns over 25% of the reporting company, or exerts substantial control over it. The law requires disclosure of specific information on each beneficial owner, including:
+<blockquote>current, as of the date on which the report is delivered, residential or business street address</blockquote>
+<p>In this application, our client would be FinCEN, rather than individual banks.</p>
+
+
+<div id="footer">
+&copy; 2021 Respect Services.
+
+<ul>
+<li><a href="terms.html">Terms of Service</a></li>
+<li><a href="contact.html">Contact Us</a></li>
+</ul>
+</div
+
+</body>
+</html>

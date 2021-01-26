@@ -1,0 +1,151 @@
+body {
+  margin: 20px 50px 30px 50px;
+  font-family: arial;
+}
+
+@font-face {
+    font-family: 'Futura';
+    src: url('Futura-Heavy.woff2') format('woff2'),
+        url('Futura-Heavy.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+#logo { 
+  width: 350px;
+}
+
+h {
+  font-family: 'Futura';
+  font-size: 3em;
+  text-align: center;
+  width: 100%;
+  display: block;
+  margin-top: 40px;
+  color: rgb(48, 38, 48);
+}
+
+#content.tight {
+    max-width: 640px;
+	margin: 0px auto;
+}
+
+#content.expansive {
+	margin: 0px;
+}
+
+#content.tight p { 
+    font-size: 1.5em;
+    line-height: 150%;
+    color: rgb(60,60,60);
+    margin-top: 10px;
+    text-align: justify;
+}
+
+#content.expansive p {
+	font-size: 1.4em;
+	line-height: 120%;
+	margin-top: 10px;
+}
+
+#content.expansive h {
+  font-size: 2.2em;
+  text-align: left;
+}
+
+blockquote {
+	font-family: "courier new";
+	font-size: 1.2em;
+}
+
+a {
+  text-decoration: underline;
+  color: rgb(48, 38, 48);
+  text-decoration-color: rgb(73, 213, 45);	
+}
+
+a:hover {
+  color: rgb(73, 213, 45) !important;
+}
+
+#team {
+  display: flex;
+  justify-content: space-between;
+}
+
+#team .person {
+  gap: 10px;
+}
+
+img.headshot {
+  background-color: #eee;
+  height: 280px;
+  width: 280px;
+  border: none;
+  display: block;
+  margin: 20px 0px 10px 0px;
+}
+
+.person .name {
+  font-weight: bold;
+  color: rgb(48, 38, 49);
+  display: block;
+  font-size: 1.7em;
+}
+
+.person .title {
+  font-size: 1.3em;
+  font-style: italic;
+  color: rgb(60,60,60);
+}
+
+#footer { 
+  margin-top: 100px;
+  border-top: 5px solid rgb(48, 38, 49);
+  padding-top: 10px;
+  padding-bottom: 20px;
+  font-family: "courier new";
+}
+
+#footer ul {
+    display: flex;
+    list-style-type: none;
+    justify-content: flex-end;
+    float: right;
+    margin: 0;
+    padding: 0;	
+}
+
+#footer a {
+  color: black;
+  text-decoration: none;
+  margin-left: 20px;
+}
+
+textarea { 
+  display: block;
+  width: 100%;
+  min-height: 300px;
+  margin: 8px 0px 8px 0px;
+  box-sizing: border-box;
+}
+
+
+em { 
+  font-weight: bold;
+  font-style: normal;  
+}
+
+button { 
+  color: white;
+  align: center;
+  font-family: futura;
+  border-radius: 4px;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-size: 110%;
+  border-width: 1px;
+  letter-spacing: .1rem;
+  background-color: rgb(73, 213, 45);
+}
