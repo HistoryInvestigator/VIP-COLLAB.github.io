@@ -44,11 +44,6 @@ body {
   #team { 
     justify-content: space-between;
   }
-  
-  #footer ul {
-    justify-content: flex-end;
-    float: right;
-  }
 }
 
 @media only screen and (max-width: 640px) {
@@ -92,6 +87,10 @@ body {
   
   #team { 
     justify-content: center; 
+  }
+  
+  #footer .company { 
+    display: none;
   }
 }
 
@@ -216,7 +215,12 @@ img.headshot {
     list-style-type: none;
     margin: 0;
     padding: 0;	
-	gap: 20px;
+	justify-content: flex-end;
+	float: right;
+}
+
+#footer li {
+  margin-left: 20px;
 }
 
 #footer a {
