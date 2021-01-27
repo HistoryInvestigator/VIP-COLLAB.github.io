@@ -10,12 +10,41 @@
 <style type="text/css">
 
 h {
-  font-size: 2.8em;
+  font-size: 2.7em;
 }
 
 #tagline em {
   font-weight: normal;
   text-decoration: underline;
+}
+
+#howitworks img {
+  width: 90px;
+  float: left;
+  margin-right: 6px;
+}
+
+/*#matching {
+  text-align: right;
+}
+
+#matching img { 
+  float: right;
+}*/
+
+#howitworks li { 
+  display: block;
+  clear: both;
+  margin-top: 15px;
+  margin-bottom: 33px;
+}
+
+#howitworks em {
+  margin-bottom: 5px;
+}
+
+#human em {
+  padding-top: 10px;
 }
 
 </style>
@@ -52,12 +81,12 @@ h {
 We make sure students belong to <a href="schools.html">school districts</a> and <a href="banks.html">bank accounts</a> have legitimate records. 
 Unlike traditional services, we are privacy conscious - we use <a href="privacy.html">only addresses, not names</a>.</p>
 
-<h>Modern, ethical, and low cost.</h>
+<h>Thorough, ethical, and low cost.</h>
 <p>Respect processes your provided list of addresses and flags violations of the rules. Our next-generation service combines algorithms with traditional manual techniques. 
-<ul class="airy">
-<li><em>Proprietary databases of addresses.</em> We curate our own lists of invalid and ambiguous addresses. Unlike traditional sources, our databases are updated on-demand.
-<li><em>Custom context-sensitive matching.</em> Evade matching by traditional 
-<li><em>Human judgement.</em> Every potential violation of rules is checked and verified by a human expert. 
+<ul id="howitworks" class="airy">
+<li id="databases"><img src="curate.png" /><em>Proprietary databases of addresses</em> We curate our own lists of invalid and ambiguous addresses. Unlike traditional sources, our databases are updated on-demand.
+<li id="matching"><img src="cluster.png" /><em>Custom context-sensitive matching</em> Variations or even errors may be introduced into addresses, to evade detection while retaining mail deliverability. We aren't fooled.
+<li id="human"><img src="brain.png" /><em>Human judgement</em> Every potential violation of rules is checked and verified by a human expert. Detailed rationale for each flagged address is provided.
 </ul></p>
 
 </div>
