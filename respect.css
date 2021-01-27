@@ -26,6 +26,10 @@ h {
   color: rgb(48, 38, 48);
 }
 
+#content { 
+    color: rgb(60,60,60);
+}
+
 #content.tight {
     max-width: 640px;
 	margin: 0px auto;
@@ -38,7 +42,6 @@ h {
 #content.tight p { 
     font-size: 1.5em;
     line-height: 150%;
-    color: rgb(60,60,60);
     margin-top: 10px;
     text-align: justify;
 }
@@ -53,6 +56,25 @@ h {
   font-size: 2.2em;
   text-align: left;
 }
+
+ul.airy { 
+  list-style-type: none;
+  margin: 0;
+  padding: 0;  
+  text-align: left;
+}
+
+ul.airy li { 
+  margin: 10px 0 15px 0;
+  font-size: 1em;
+  line-height: 170%;
+}
+
+ul.airy em {
+  font-size: 1.5em;
+  display: block;
+}
+
 
 blockquote {
 	font-family: "courier new";
