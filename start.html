@@ -9,12 +9,34 @@
 <link rel="stylesheet" type="text/css" href="menu.css" />
 <style type="text/css">
 
+@media only screen and (min-width: 640px) {
+  #review {
+    justify-content: space-between;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  h { 
+    font-size: 2.2em; 
+  }
+  
+  #review {
+    flex-direction: column;
+  }
+  
+  #review button { 
+    margin-top: 10px;
+    width: 100%;
+  }
+}
+
+
 form { 
   margin-top: 30px;
 }
 
 form, form input {
-  font-size: 1.3em;
+  font-size: 1.2em;
 }
 
 #newuser { 
@@ -32,18 +54,13 @@ input {
   margin-bottom: 10px;
 }
 
-button { 
-  margin-left: 10px;
-  min-width: 20%;
-}
-
 textarea {
-  font-size: 1.1em;
+  font-size: 1em;
+  font-family: "courier new";
 }
 
 #review {
   display: flex;
-  justify-content: space-between;
   align-items: baseline;
 }
 

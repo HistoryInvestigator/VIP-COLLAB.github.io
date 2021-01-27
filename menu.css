@@ -84,7 +84,7 @@
   display: block;
   position: absolute;
   top: -7px;
-  right: 5px;
+  right: -5px;
   cursor: pointer;
   opacity: 0; /* hide this */
   z-index: 2; /* and place it over the hamburger */

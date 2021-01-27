@@ -9,34 +9,47 @@
 <link rel="stylesheet" type="text/css" href="menu.css" />
 <style type="text/css">
 
-h {
-  font-size: 2.7em;
-}
-
 #tagline em {
-  font-weight: normal;
+  font-weight: 900;
   text-decoration: underline;
 }
 
+@media only screen and (min-width: 640px) {
+  #howitworks img {
+    width: 90px;
+    margin-right: 6px;	
+  }
+  
+  #howitworks li { 
+    margin-top: 15px;
+    margin-bottom: 33px;
+  }  
+}
+
+@media only screen and (max-width: 640px) {
+  #howitworks img {
+    width: 30px;
+	margin-right: 3px;
+  }
+  
+  #howitworks em {
+    padding-top: 5px;  
+    height: 25px;
+  }
+  
+  #howitworks li { 
+    margin-top: 10px;
+    margin-bottom: 16px;
+  }    
+}
+
 #howitworks img {
-  width: 90px;
   float: left;
-  margin-right: 6px;
 }
-
-/*#matching {
-  text-align: right;
-}
-
-#matching img { 
-  float: right;
-}*/
 
 #howitworks li { 
   display: block;
   clear: both;
-  margin-top: 15px;
-  margin-bottom: 33px;
 }
 
 #howitworks em {
