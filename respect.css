@@ -1,6 +1,26 @@
 body {
-  margin: 20px 50px 30px 50px;
   font-family: arial;
+  box-sizing: border-box;
+}
+
+@media only screen and (min-width: 640px) {
+  body { 
+    margin: 20px 50px 30px 50px;
+  }
+  
+  #logo { 
+    width: 350px;
+  }  
+}
+
+@media only screen and (max-width: 640px) {
+  body { 
+    margin: 10px;
+  }
+
+  #logo { 
+    width: 200px;
+  }	
 }
 
 @font-face {
@@ -12,12 +32,9 @@ body {
     font-display: swap;
 }
 
-#logo { 
-  width: 350px;
-}
-
 h {
   font-family: 'Futura';
+  font-weight: 900;
   font-size: 3em;
   text-align: center;
   width: 100%;

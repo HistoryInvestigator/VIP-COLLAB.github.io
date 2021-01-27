@@ -1,36 +1,93 @@
-body
-{
-	overflow-x: hidden; /* needed because hiding the menu on the right side is not perfect,  */
+@media only screen and (min-width: 640px) {
+  #menuToggle { 
+    top: 50px;
+    right: 50px;
+  }
+  
+  #menu { 
+    top: -50px;
+    right: -50px;
+    width: 250px;
+    padding-right: 50px;
+    padding-top: 125px;
+    padding-bottom: 50px;
+    text-align: right; 	
+  }
+  
+  #menuToggle input {
+    width: 77px;
+    height: 77px;
+  }  
+  
+  #menuToggle span { 
+    width: 66px;
+    height: 7px;
+    margin-bottom: 10px;	
+  }
+
+  #menuToggle input:checked ~ span:nth-last-child(2)
+  {
+    transform: rotate(45deg)  translate(-5px, -5px);
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  #menuToggle { 
+    top: 25px;
+    right: 10px;
+  }  
+  
+  #menu { 
+    top: -25px;
+    right: -10px;
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    padding-top: 80px;
+  }
+  
+  #menuToggle input {
+    width: 55px;
+	height: 55px;
+  }
+
+  #menuToggle span { 
+    width: 44px;
+    height: 5px;
+    margin-bottom: 8px;
+  }  
+  
+  #menuToggle input:checked ~ span {
+    margin-right: 10px;
+  }
+  
+  #menuToggle input:checked ~ span:nth-last-child(2)
+  {
+    transform: rotate(45deg)  translate(-7px, -7px);
+  }  
 }
 
 #menuToggle
 {
   display: block;
-  position: absolute;
-  top: 50px;
-  right: 50px;
-  
+  position: fixed;
   z-index: 1;
-  
-  -webkit-user-select: none;
   user-select: none;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
 #menuToggle input
 {
   display: block;
-  width: 66px;
-  height: 77px;
   position: absolute;
   top: -7px;
-  left: -5px;
-  
+  right: 5px;
   cursor: pointer;
-  
   opacity: 0; /* hide this */
   z-index: 2; /* and place it over the hamburger */
-  
-  -webkit-touch-callout: none;
 }
 
 /*
@@ -39,14 +96,9 @@ body
 #menuToggle span
 {
   display: block;
-  width: 66px;
-  height: 7px;
-  margin-bottom: 10px;
   position: relative;
-  
   background-color: rgb(48, 38, 48);
   border-radius: 4px;
-  
   z-index: 1;
   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
               background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
@@ -57,32 +109,33 @@ body
  * Transform all the slices of hamburger
  * into a crossmark.
  */
-#menuToggle input:checked ~ span:nth-last-child(5)
+#menuToggle input:checked ~ span:nth-last-child(5),
+#menuToggle input:checked ~ span:nth-last-child(2)
 {
   opacity: 1;
-  transform: rotate(45deg) translate(15px, 15px);
   background: #aaa;
 }
 
+  #menuToggle input:checked ~ span:nth-last-child(5) {
+    transform: rotate(-45deg);
+	transform-origin: 100% 0;
+  }  
+  
+  #menuToggle input:checked ~ span:nth-last-child(2)
+  {
+	transform-origin: 100% 100%;  
+  }
+  
 /*
- * But let's hide the middle one.
+ * But let's hide the middle ones.
  */
 #menuToggle input:checked ~ span:nth-last-child(4), 
-#menuToggle input:checked ~ span:nth-last-child(2)
+#menuToggle input:checked ~ span:nth-last-child(3)
 {
   opacity: 0;
   transform: rotate(0deg) scale(0.2, 0.2);
 }
 
-/*
- * Ohyeah and the last one should go the other direction
- */
-#menuToggle input:checked ~ span:nth-last-child(3)
-{
-  opacity: 1;
-  transform: rotate(-45deg) translate(9px, -9px);
-  background: #aaa;
-}
 
 /*
  * Make this absolute positioned
@@ -91,22 +144,10 @@ body
 #menu
 {
   position: absolute;
-  width: 250px;
-  margin: -120px 0 0 0;
-  padding-right: 100px;
-  padding-top: 125px;
-  padding-bottom: 50px;
-  right: -100px;
-  
+  margin: 0px;	
   background: rgb(48, 38, 48);
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
-  /* to stop flickering of text in safari */
-  
-  transform-origin: 0% 0%;
-  transform: translate(100%, 0);
-  text-align: right;
-/*  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);*/
 }
 
 #menu li
@@ -121,20 +162,12 @@ body
  color: white;
 }
 
-/*
- * And let's fade it in from the left
- */
-#menuToggle input:checked ~ ul
-{
-  transform: none;
-  opacity: 1;
+#menuToggle input ~ ul { 
+  display: none;
 }
 
-@media screen and (max-width: 768px) {
-  #menu {
-    transform: none;
-    opacity: 0;
-
-    transition: opacity 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
-  }
+#menuToggle input:checked ~ ul
+{
+  display: block;
+  opacity: 1;
 }
