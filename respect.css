@@ -22,6 +22,7 @@ body {
   
   #content.expansive p {
 	font-size: 1.4em;  
+	line-height: 120%;	
   }
   
   #content.expansive h {
@@ -39,6 +40,15 @@ body {
   blockquote { 
 	font-size: 1.2em;
   }
+  
+  #team { 
+    justify-content: space-between;
+  }
+  
+  #footer ul {
+    justify-content: flex-end;
+    float: right;
+  }
 }
 
 @media only screen and (max-width: 640px) {
@@ -51,7 +61,7 @@ body {
   }
 
   h { 
-    font-size: 1.4em;
+    font-size: 1.6em;
   }	
 
   #content.tight p { 
@@ -59,11 +69,12 @@ body {
   }
   
   #content.expansive p {
-	font-size: 0.9em;  
+	font-size: 1em;  
+	line-height: 150%;
   }
   
   #content.expansive h {
-    font-size: 1.7em;  
+    font-size: 1.5em;  
   } 
 
   ul.airy li { 
@@ -77,6 +88,10 @@ body {
   blockquote { 
   	font-size: 0.8em;
 	margin-left: 0px;
+  }
+  
+  #team { 
+    justify-content: center; 
   }
 }
 
@@ -119,7 +134,6 @@ h {
 }
 
 #content.expansive p {
-	line-height: 120%;
 	margin-top: 10px;
 }
 
@@ -160,11 +174,11 @@ a:hover {
 
 #team {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
-#team .person {
-  gap: 10px;
+#person { 
+  flex-grow: 1;
 }
 
 img.headshot {
@@ -200,16 +214,14 @@ img.headshot {
 #footer ul {
     display: flex;
     list-style-type: none;
-    justify-content: flex-end;
-    float: right;
     margin: 0;
     padding: 0;	
+	gap: 20px;
 }
 
 #footer a {
   color: black;
   text-decoration: none;
-  margin-left: 20px;
 }
 
 textarea { 
