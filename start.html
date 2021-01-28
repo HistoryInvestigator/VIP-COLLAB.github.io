@@ -15,6 +15,10 @@
   #review {
     justify-content: space-between;
   }
+  
+#review button { 
+	padding: 8px 6px 8px 6px;
+}  
 }
 
 @media only screen and (max-width: 640px) {
@@ -29,7 +33,7 @@
   #review button { 
     margin-top: 10px;
     width: 100%;
-	padding: 8px 0px 8px 0px;
+	padding: 8px 1px 8px 1px;
   }
 }
 
@@ -38,8 +42,13 @@ form {
   margin-top: 30px;
 }
 
-form, form input {
+form, form input, select {
   font-size: 1.2em;
+  box-sizing: border-box;
+}
+
+select option[disabled=disabled] {
+  color: #ccc;
 }
 
 #newuser { 
@@ -52,7 +61,7 @@ form, form input {
   min-width: 300px;
 }
 
-input { 
+input, select { 
   flex-grow: 1;
   margin-bottom: 10px;
 }
@@ -96,16 +105,34 @@ textarea {
 <div id="content" class="tight">
 
 <h>10 cents per address.</h>
-<p>The most inexpensive, privacy-preserving service.</p>
+<p>This is the lowest rate in the industry for human-reviewed results. An additional <em>$100</em> is charged for each correctly-identified invalid address. These findings may be purchased individually or skipped on a case-by-case basis.</p>
 
 <h>Let's get started.</h>
 <form
   action=""
   method="POST">
   <div id="newuser">
-    <input type="text" name="_replyto" placeholder="Your name" required>
-    <input type="email" name="_replyto" placeholder="Your email" required>
-    <input type="text" name="_replyto" placeholder="Your institution" required>
+    <input type="text" name="name" placeholder="Your name" required>
+    <input type="email" name="email" placeholder="Your email" required>
+    <input type="text" name="org" placeholder="Your institution" required>
+	<select name="industry" required>
+	  <option value="" disabled="disabled" selected>Industry</option>
+      <optgroup label="Education">
+	  <option value="priv_k12">Private K-12 School</option>
+	  <option value="priv_university">Private University</option>
+	  <option value="pub_k12">Public K-12 School</option>
+	  <option value="pub_university">Public University</option>
+	  <option value="edu_other">Other</option>
+      </optgroup>
+      <optgroup label="Financial">
+	  <option value="bank">Bank</option>
+	  <option value="creditunion">Credit Union</option>
+	  <option value="investmentbank">Investment Bank</option>
+	  <option value="insurance">Insurance</option>
+	  <option value="wealthmanage">Wealth Management</option>
+	  <option value="fin_other">Other</option>
+      </optgroup>
+    </select>	  
   </div>
   <textarea name="message" placeholder="List of addresses to check, one per line. These are transmitted securely to our server."></textarea>
   <div id="review">

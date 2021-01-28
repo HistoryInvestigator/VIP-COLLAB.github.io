@@ -4,6 +4,8 @@
 <head>
 <title>Respect</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="preload" href="Futura-Heavy.woff" as="font">
+<link rel="preload" href="Futura-Heavy.woff2" as="font">
 <link rel="stylesheet" type="text/css" href="normalize.css" />
 <link rel="stylesheet" type="text/css" href="respect.css" />
 <link rel="stylesheet" type="text/css" href="menu.css" />
@@ -24,6 +26,18 @@
     margin-top: 15px;
     margin-bottom: 33px;
   }  
+  
+  #problems {
+    columns: 2;
+  }	
+
+  #problems li:before {
+    font-size: 1.9em;
+  }
+  
+  #problems li {
+    font-size: 1.2em;
+  }
 }
 
 @media only screen and (max-width: 640px) {
@@ -41,6 +55,19 @@
     margin-top: 10px;
     margin-bottom: 16px;
   }    
+  
+  #problems {
+    column-width: 220px;
+  }
+  
+  #problems li:before {
+    font-size: 1.5em;
+  }
+  
+  #problems li {
+    font-size: 0.9em;
+	word-wrap: no-wrap;
+  }  
 }
 
 #howitworks img {
@@ -58,6 +85,24 @@
 
 #human em {
   padding-top: 10px;
+}
+
+#problems {
+  list-style-type: none;
+  margin: 10px 0;
+  padding: 0;
+}
+
+#problems li:before {
+  content: '\2611';
+  margin-right: 4px;
+  color: var(--lightpurple);
+}
+
+#problems li {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
 }
 
 </style>
@@ -94,7 +139,7 @@ We make sure students belong to <a href="schools.html">school districts</a> and 
 Unlike traditional services, we are privacy conscious - we use <a href="privacy.html">only addresses, not names</a>.</p>
 
 <h>Thorough, ethical, and low cost.</h>
-<p>Respect processes your addresses and flags violations of the rules. We combine algorithms with manual techniques to determine residential or business status. We avoid the stale data, false positives, and ambiguous cases of fully automated approaches.
+<p>Respect processes your addresses and flags violations of the rules. We combine algorithms with manual techniques to determine residential or business status. We avoid the stale data, false positives, and incorrectly-handled ambiguities of fully automated approaches.
  
 <ul id="howitworks" class="airy">
 <li id="databases"><img src="curate.png" /><em>Proprietary databases of addresses</em> We curate our own lists of invalid and ambiguous addresses. Unlike traditional sources, our databases are updated on-demand.
@@ -102,10 +147,18 @@ Unlike traditional services, we are privacy conscious - we use <a href="privacy.
 <li id="human"><img src="brain.png" /><em>Human review and judgement</em> Every potential violation of rules is checked and verified by a human expert. Detailed rationale for each flagged address is provided.
 </ul></p>
 
-<h>Here's our recommendation.</h>
-<p>Respect is ideal for organizations which need to validate tens of thousands of addresses at low cost (in terms of both money and privacy) and no false positives. 
-Databases of millions of addresses should be preprocessed by other automated methods. 
-If more complete detection of invalid addresses is required, traditional private investigation should be additionally utilized.</p>  
+<h>These are problems we solve.</h>
+<ul id="problems">
+<li>Addresses outside of bounds
+<li>Mailing-only addresses
+<li>Businesses claimed as homes
+<li>Nonexistent addresses 
+<li>Vacant or unusable locations
+<li>Mixed-use ambiguities
+</ul>
+<p>Respect is ideal for validating tens of thousands of addresses at low cost (in terms of both money and privacy) and no false positives. 
+Databases of millions of addresses should be preprocessed by automated methods. 
+If more complete detection is required, then traditional private investigation should be additionally utilized.</p>  
 </div>
 
 <div id="footer">

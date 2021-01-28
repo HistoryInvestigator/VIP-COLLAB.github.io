@@ -1,3 +1,9 @@
+:root {
+  --green: rgb(73, 213, 45);
+  --purple: rgb(48, 38, 48);
+  --lightpurple: rgb(140,36,140);
+}
+
 body {
   font-family: arial;
   box-sizing: border-box;
@@ -110,7 +116,7 @@ h {
   width: 100%;
   display: block;
   margin-top: 40px;
-  color: rgb(48, 38, 48);
+  color: var(--purple);
 }
 
 #content { 
@@ -163,12 +169,12 @@ blockquote {
 
 a {
   text-decoration: underline;
-  color: rgb(48, 38, 48);
-  text-decoration-color: rgb(73, 213, 45);	
+  color: var(--purple);
+  text-decoration-color: var(--green);	
 }
 
 a:hover {
-  color: rgb(73, 213, 45) !important;
+  color: var(--green) !important;
 }
 
 #team {
@@ -182,8 +188,8 @@ a:hover {
 
 img.headshot {
   background-color: #eee;
-  height: 280px;
-  width: 280px;
+  height: 295px;
+  width: 295px;
   border: none;
   display: block;
   margin: 20px 0px 10px 0px;
@@ -191,7 +197,7 @@ img.headshot {
 
 .person .name {
   font-weight: bold;
-  color: rgb(48, 38, 49);
+  color: var(--purple);
   display: block;
   font-size: 1.7em;
 }
@@ -204,7 +210,7 @@ img.headshot {
 
 #footer { 
   margin-top: 100px;
-  border-top: 5px solid rgb(48, 38, 49);
+  border-top: 5px solid var(--purple);
   padding-top: 10px;
   padding-bottom: 20px;
   font-family: "courier new";
@@ -252,5 +258,5 @@ button {
   font-size: 110%;
   border-width: 1px;
   letter-spacing: .1rem;
-  background-color: rgb(73, 213, 45);
+  background-color: var(--green);
 }
